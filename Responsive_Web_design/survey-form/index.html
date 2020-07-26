@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey Form : FreeCodeCamp</title>
+        <meta name="description" content="A simple survey form with the instructions of FreeCodeCamp.org as a part of their online course">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body class="bg-green-pea">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div>
+            <header class="text-center">
+                <h1 id="title">Survey Form : User Feedback</h1>
+            </header>
+
+            <main id="form-container" class="container bg-white">
+                <div class="text-center">
+                    <p id="description">Let us know how we can improve our product</p>
+                    <p class="text-right"><small>Note : <span class="required"></span> means that specific form field is <strong>required</strong></small></p>
+                </div>
+
+                <!-- Form Content -->
+                <form id="survey-form" method="POST" action="#">
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="name-label" for="name"><span class="required"></span>Name : </label>
+                        </div>
+                        <div class="form-input">
+                            <input id="name" type="text" name="name" class="input-field" placeholder="Enter your full name" autofocus required>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="email-label" for="email"><span class="required"></span>Email : </label>
+                        </div>
+                        <div class="form-input">
+                            <input id="email" type="email" name="email" class="input-field" placeholder="Enter your valid email" autofocus required>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="number-label" for="age"><span class="required"></span>Age : </label>
+                        </div>
+                        <div class="form-input">
+                            <input id="number" type="number" min="1" max="100" name="age" class="input-field" placeholder="Enter your current age" autofocus required>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="dob-label" for="dob">DOB (Date of Birth) : </label>
+                        </div>
+                        <div class="form-input">
+                            <input id="dob" type="date" name="dob" class="input-field" placeholder="Select your DOB" autofocus>
+                        </div>
+                    </div>
+
+                    <!-- Radio Input Element -->
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="gender-label" for="gender"><span class-"required"></span>Gender : </label>
+                        </div>
+                        <div class="form-input">
+                            <ul class="form-select-list">
+                                <li class="radio"><label><input name="gender" value="male" type="radio"> Male</label></li>
+                                <li class="radio"><label><input name="gender" value="female" type="radio"> Female</label></li>
+                                <li class="radio"><label><input name="gender" value="none" type="radio"> None Of Above</label></li>
+                                <li class="radio"><label><input name="gender" value="prefer-nts" type="radio"> Prefer not to say</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Select Element -->
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="role-label" for="role">Which is the best to describe your current role ? </label>
+                        </div>
+                        <div class="form-input">
+                            <select id="dropdown" name="role" class="input-field">
+                                <option disabled value="">-- Select an option --</option>
+                                <option value="student">Student</option>
+                                <option value="graduated">Graduated</option>
+                                <option value="full-time-employee">Full-Time Employee</option>
+                                <option value="part-time-employee">Part-Time Employee</option>
+                                <option value="full-time-learner">Full-Time Learner</option>
+                                <option value="prefer-nts">Prefer Not To Say</option>
+                                <option value="others" selected>Others</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox Element -->
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="learn-label" for="learn"><span class="required"></span>What have you learnt from this online course? (Tick all that apply)</label>
+                        </div>
+                        <div class="form-input">
+                            <ul class="form-select-list">
+                                <li><input type="checkbox" name="learn" value="1"> HTML Syntax</li>
+                                <li><input type="checkbox" name="learn" value="2"> HTML Table</li>
+                                <li><input type="checkbox" name="learn" value="3"> HTML Form</li>
+                                <li><input type="checkbox" name="learn" value="4"> CSS Syntax and Selectors</li>
+                                <li><input type="checkbox" name="learn" value="5"> CSS Box Model</li>
+                                <li><input type="checkbox" name="learn" value="6"> CSS Layout</li>
+                                <li><input type="checkbox" name="learn" value="7"> CSS Flexbox</li>
+                                <li><input type="checkbox" name="learn" value="8"> CSS Grid</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <div class="form-label">
+                            <label id="comment-label" for="comment"> Any Comments or Suggestions ? </label>
+                        </div>
+                        <div class="form-input">
+                            <textarea id="comment" class="input-field" name="comment" placeholder="Enter your comments or suggestions here ..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="container text-center">
+                        <button id="submit" type="submit" class="btn"><span class="btn-text">Submit</span></button>
+                    </div>
+                </form>
+            </main>
+        </div>
+        
+        <!-- JavaScript link in order to execute this file smoothly -->
+        <script src="" async defer></script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>

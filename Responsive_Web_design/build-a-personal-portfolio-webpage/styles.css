@@ -1,0 +1,341 @@
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+        * default document font size = 16px, 1rem = 16px, 100% = 16px
+        * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+* This helps automate a bit of responsiveness.
+* The trick is to use the rem unit for size values, margin and padding.
+* Because rem is relative to the document font size
+* when we scale up or down the font size on the document
+* it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+* The calculation is the following
+* screen size divided by browser base font size
+* As an example: a breakpoint at 980px
+* 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+/* Base styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1,h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#ddd;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* navigation */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+    z-index: 10;
+    background-color: red;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+@media (max-width: 28.75em){
+    
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-list li {
+    padding: 2.5rem;
+    margin-right: 3rem;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 3rem;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    color: paleturquoise;
+    text-shadow: -1px 1px 0 black;
+}
+
+.nav-list a:hover {
+    color: skyblue;
+}
+
+.nav-list a:active {
+    font-weight: bold;
+    color: #04aef7;
+}
+
+/* Welcome Section */
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Noto Serif', serif;
+    background-color:rgb(83, 78, 78);
+    background-image: linear-gradient(65deg, gray 0%, #3a3d40 50%, #181719 100%);
+}
+
+#welcome-section > h1 {
+    font-family: 'Noto Serif', serif;
+    text-shadow: 0px 0.5px 4px lightgoldenrodyellow;
+}
+
+#welcome-section > p {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    color: lightcoral;
+    margin: 1rem 3rem;
+}
+
+/* Project Section */
+
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: #45567d;
+}
+
+.projects-section-header {
+    color: white;
+    max-width: 500px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid white;
+}
+
+@media (max-width: 28.75em){
+    .projects-section-header {
+        font-size: 4rem;
+    }
+}
+
+.project {
+    background-color: #303841;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+.code-hover {
+    color: #303841;
+    transition: color 0.3s ease-out;
+}
+
+/* 
+    Styling rule that change the color of element(s) in class code-hover
+    when hover over the parent element with class project
+ */
+.project:hover .code-hover {
+    color: #ff7f50;
+}
+
+.project-image-container {
+    margin: 1.5rem;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    font-size: 2.5rem;
+    padding: 2rem 0.8rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 60vh;
+    padding: 0 2rem;
+    background: black;
+}
+
+.contact-section-header {
+    color: #ddd;
+}
+
+.contact-section-header > h2 {
+    font-size: 6rem;
+}
+
+.contact-section-header > p {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+#contact-header::before {
+    content: "Ways to contact me";
+}
+
+@media (max-width: 600px) {
+    #contact-header::before {
+        content: "Contact"
+    }
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    font-size: 2.6rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+.contact-details:hover {
+    color: palegoldenrod;
+}
+
+.contact-details:active {
+    color: gold;
+}
+
+/* Footer */
+footer {
+    font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color: black;
+    border-top: 5px solid red;
+}
+
+footer > p {
+    font-size: 2.5rem;
+    font-family: 'Arial Black', Helvetica, sans-serif;
+    margin: 2rem;
+    color: #ddd;
+}
+
+footer > p > a {
+    color: rgb(78, 78, 241);
+}
+
+footer > p > a:hover {
+    color: paleturquoise;
+}
+
+footer > p > a:active {
+    color: lightskyblue;
+}
+
+@media (max-width: 28.75em) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

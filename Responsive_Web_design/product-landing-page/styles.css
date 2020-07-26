@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+/*===== General Laptop Version Style Sheet =====*/
+
+:root {
+    font-size: 1.25rem;
+    font-family: "Lato", Verdana, sans-serif;
+
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+
+    /* Sizing */
+    width: 100%;
+    min-height: 75px;
+
+    /* Position Styling */
+    /* position: fixed;
+    top: 0; To avoid the visible of elements scrolled over */
+
+    /* Display */
+    display: block;
+
+    /* Spacing */
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+}
+
+section {
+    margin: 1rem;
+}
+
+ul.icon-free-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.nav-link-list > li {
+    display: inline-block;
+    margin: 10px calc(1vw + 5px);
+}
+
+a.nav-link, a.link-text {
+    text-decoration: none;
+    font-weight: 520;
+    color: black;
+}
+
+a.nav-link:hover, a.link-text:hover {
+    font-weight: bold;
+    color: gray;
+}
+
+#nav-bar {
+    overflow: hidden;
+    background-color: white;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + #nav-bar.div {
+    padding-top: 60px;
+}
+
+
+.container {
+    margin: 0 auto;
+}
+
+.btn {
+    /* Font Styling */
+    font-weight: 600;
+    font-size: calc(0.6em + 1vw);
+
+    /* Border Styling */
+    border: none;
+    border-radius: 5px;
+
+    /* Spacing */
+    padding: calc(5px + 1vw) calc(1rem + 2vw);
+    margin: calc(1vw + 1em) 0;
+}
+
+.btn:hover {
+    background-color: silver;
+
+    /* Text Color Changes */
+    color: white;
+
+    box-shadow: 0 0 15px -2px whitesmoke;
+}
+
+/*-- Used for features layout --*/
+
+.features-layout {
+
+    display: grid;
+
+    /* Grid Containers Styling */
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:"icon title"
+                        "icon description";
+
+    /* Spacing */
+    grid-column-gap: 2vw;
+    margin: 3vw;
+}
+
+.features-layout > img.features-icon {
+
+    /* Size */
+    /* grid-column: 1 / 2;
+    grid-row: 1 / 2; */
+
+    grid-area: icon;
+    justify-self: center;
+    align-self: center;
+}
+
+.features-layout > h3.features-title {
+
+    /* Font-Styling */
+    font-size: calc(1rem + 1.5vw);
+
+    /* Coloring */
+    color: black;
+
+    /* Alignment */
+    justify-self: left;
+    align-self: flex-end;
+}
+
+.features-layout > p.features-description {
+
+    /* Coloring */
+    color: gray;
+
+    /* Sentences Styling */
+    line-height: calc(1em + 1vw);
+
+    /* Font Styling */
+    font-size: calc(0.6rem + 1vw);
+
+    /* Spacing */
+    padding-right: calc(2rem + 2vw);
+}
+
+.features-layout > p.features-description > span.key-point {
+    color: black;
+    font-weight: 550;
+}
+
+.take-note::after {
+    
+    content: "*";
+    color: red;
+    text-decoration: none;
+}
+
+.pricing-card {
+
+    /* Display */
+    display: flex;
+    flex-direction: column;
+
+    /* Alignment */
+    align-items: center;
+    text-align: center;
+
+    /* Spacing */
+    margin: 10px;
+
+    /* Border Styling */
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Product Pricing Titles */
+.pricing-card > h3 {
+
+    /* Color */
+    background-color: gray;
+    color: white;
+
+    /* Spacing */
+    padding: 10px 15px;
+
+    /* Border */
+    border: 1px solid black;
+}
+
+.pricing-card > p.pricing {
+    font-weight: 550;
+}
+
+/* ----- Individual Styling ----- */
+#body-content { 
+    /* padding: 3vw; */
+    padding-top: 0;
+}
+
+#logo-container { width: 30%; }
+
+#header-img {
+    display: inline-block;
+
+    /* Sizing */
+    height: 6vw;
+    min-height: 3em;
+
+    /* Spacing */
+    padding-top: 10px;
+}
+
+#form-email-label > label {
+    font-size: calc(1vw + 10px);
+}
+
+input#email {
+
+    /* Size */
+    width: 45%;
+    max-width: 400px;
+
+    /* Border Styling */
+    border-radius: 5px;
+
+    /* Spacing */
+    padding: calc(5px + 1vw) calc(1rem + 1vw);
+    margin-top: calc(1vw + 1em);
+
+    /* Font Styling */
+    font-size: calc(1vw + 10px);
+}
+
+#form-container {
+    padding: calc(1em + 1vw);
+}
+
+#video {
+    width: calc(560px + 5vw);
+    height: calc(315px + 5vw);
+}
+
+/* ----- General Styling Classes ----- */
+
+/* Display Classes */
+.display-b { display: block; }
+.display-f { display: flex; }
+.display-g { display: grid; }
+.display-i { display: inline; }
+.display-ib { display: inline-block; }
+
+/* Float Classes */
+.float-l { float: left; }
+.float-r { float: right; }
+
+/* Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Coloring - Background and Elements */
+.bg-white { background-color: white; }
+.bg-black { background-color: black; }
+.bg-black > * { color: white; }
+
+.elem-white { color: white; }
+.elem-black { color: black; }
+
+/* Padding */
+.p-0 { padding: 0; }
+.p-1 { padding: 1em; }
+.p-2 { padding: 2em; }
+.p-3 { padding: 3em; }
+.p-4 { padding: 4em; }
+.p-5 { padding: 5em; }
+
+
+/*===== Tablet Version Style Sheet =====*/
+@media only screen and (max-width: 950px) {
+
+}
+
+/*===== Mobile Version Style Sheet =====*/
+@media only screen and (max-width: 550px) {
+
+}

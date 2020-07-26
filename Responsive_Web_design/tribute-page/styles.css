@@ -1,0 +1,241 @@
+/* Styling definition for the tribute page to Kobe Bryant */
+
+:root {
+    font-size: 1.5rem;
+    color: black;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.container {
+    margin: auto;
+}
+
+#main {
+    background-color: #eee; 
+    border-radius: 1em;
+    width: 90%;
+}
+
+header > * {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p, figcaption {
+    color: rgba(102, 102, 102, 0.8);
+}
+
+h1, h2, h3, h4, h5, h6, p, figcaption, cite {
+    padding: 0 5vw;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    margin-top: 5em;
+    padding: 1em;
+}
+
+footer > * {
+    margin: 0;
+}
+
+footer > #footer-main {
+
+    /* Size */
+    width: 80%;
+
+    /* Positioning */
+    position: relative;
+    bottom: 3.5em;
+    margin: 0 auto;
+
+    /* Spacing */
+    padding: 1.5vw 3vw;
+
+    /* Styling */
+    box-shadow: 0 0 2px 2px #8A795D;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: palegoldenrod;
+}
+
+header#title-container {
+
+    /* Position */
+    position: relative;
+    top: 3em;
+    right: 1vw;
+
+    /* Styling */
+    background-color: black;
+    border-radius: 0.5em;
+
+    /* Size */
+    width: 100%;
+
+    /* Spacing */
+    padding: 1vw;
+}
+
+#title-container > h1 {
+    color: white;
+}
+
+#title-container > p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+figure#img-div {
+
+    /* Size */
+    max-width: 90%;
+
+    /* Spacing */
+    margin: 0 auto;
+    margin-top: 4em;
+    padding: 1.5em 0;
+
+    /* Styling */
+    background-color: white;
+    border-radius: 0.3em;
+}
+
+figure#img-div > img {
+
+    display: block;
+
+    /* Size */
+    width: 95%;
+
+    /* Spacing */
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+    /* Styling */
+    border-radius: 0.5em;
+}
+
+figure#img-div > figcaption {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+table#timeline { 
+    
+    padding-left: 1em; 
+    padding-right: 1em;
+    padding-bottom: 1.5em; 
+    margin: 0 auto;
+}
+
+table#timeline > tbody > tr > td.timeline-date {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+table#timeline > tbody > tr > td.timeline-info {
+    text-align: left;
+    padding-right: 5vw;
+}
+
+span.important {
+    font-weight: bold;
+}
+
+blockquote {
+
+    /* Styling */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    /* Spacing */
+    margin: 0 auto;
+
+    /* Size */
+    width: 85%;
+}
+
+/* Padding Classes Definition */
+.p-0 { padding: 0; }
+.p-1 { padding: 1em; }
+.p-2 { padding: 2em; }
+.p-3 { padding: 3em; }
+.p-4 { padding: 4em; }
+.p-5 { padding: 5em; }
+
+.pt-0 { padding-top: 0; }
+.pt-1 { padding-top: 1em; }
+.pt-2 { padding-top: 2em; }
+.pt-3 { padding-top: 3em; }
+.pt-4 { padding-top: 4em; }
+.pt-5 { padding-top: 5em; }
+
+.pb-0 { padding-bottom: 0; }
+.pb-1 { padding-bottom: 1em; }
+.pb-2 { padding-bottom: 2em; }
+.pb-3 { padding-bottom: 3em; }
+.pb-4 { padding-bottom: 4em; }
+.pb-5 { padding-bottom: 5em; }
+
+
+/* Text Alignment */
+.text-center { text-align: center;}
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+button.btn {
+    padding: 1.5vw 3vw;
+    border-radius: 2em;
+}
+
+button.btn:hover {
+    background-color: white;
+}
+
+button.btn > .btn-text {
+    font-weight: 700;
+    font-size: calc(10px + 1.5vw);
+}
+
+@media only screen and (max-width: 550px){
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1rem; }
+
+    table#timeline > tbody > tr > td.timeline-date ,
+    table#timeline > tbody > tr > td.timeline-info {
+        
+        /* Display */
+        display: block;
+
+        /* Container Alignment */
+        margin: auto;
+
+        /* Size */
+        width: 85%;
+    }
+
+    table#timeline > tbody > tr > td.timeline-date {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    table#timeline > tbody > tr > td.timeline-info {
+        text-align: justify;
+        padding-right: 0;
+    }
+}

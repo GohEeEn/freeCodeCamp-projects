@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="body-content" class="container">
+
+            <!-- Header -->
+            <header id="header">
+
+                <!-- Navigation Links -->
+                <nav id="nav-bar" style="padding-right: 1.5em;">    
+                    <div id="logo-container" class="display-ib float-l">
+                        <a href="#" target="_blank">
+                            <img id="header-img" src="images/mobile_life_logo.png">
+                        </a>
+                    </div>
+
+                    <ul class="icon-free-list nav-link-list display-ib float-r">
+                        <li><a class="nav-link" href="#works">How it works</a></li>
+                        <li><a class="nav-link" href="#features">Features</a></li>
+                        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="display-g">
+
+                <!-- 1st Section : How it works -->
+                <section id="works" class="text-center">
+                    <div id="video-container" class="container text-center">
+                        <iframe id="video" 
+                                src="https://www.youtube-nocookie.com/embed/brCx-t5Y6FM" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+
+                        <p><small>Note : This video is owned by <a href="https://www.youtube.com/channel/UCgfZazkz3uwmbVmvkl0cTbg" target="_blank">Techline</a>. I'm just using it for project purpose</small></p>
+                    <div>
+                </section>
+
+                <!-- 2nd Section : Features -->
+                <section id="features">
+                    <div class="features-layout">
+                        <img class="features-icon" src="images/samsung-dex.svg" alt="A tablet icon in shape of a Samsung Galaxy Tablet S4 horizontally">
+                        <h3 class="features-title">Samsung Dex</h3>
+                        <p class="features-description">
+                            Samsung galaxy tablet S4 is the first Samsung tablet installed with Samsung Dex software, 
+                            which allows multitasking and the productivity of a computer with the mobility of a tablet. Get yourself a dedicated <a class="take-note" href="#">keyboard</a> or by connecting to a monitor 
+                            via an <a class="take-note" href="#">HDMI adapter</a> to make multitasking ability of this tablet more efficient
+                        </p>
+                    </div>
+
+                    <div class="features-layout">
+                        <img class="features-icon" src="images/s-pen.svg" alt="A S-Pen icon in black and white color">
+                        <h3 class="features-title">S-Pen included</h3>
+                        <p class="features-description">
+                            The lastest S Pen is packed with features to make you endlessly productive. Its <span class="key-point">0.7mm</span> rubber tip 
+                            and the detection of <span class="key-point">4,096 levels</span> of screen pressure provides rensponsive feedback and smooth writing on the tablet.
+                            <span class="key-point">9.1 grams</span> of weight is optimised for long periods of writing.
+                        </p>
+                    </div>
+
+                    <div class="features-layout">
+                        <img class="features-icon" src="images/screen-size.svg" alt="A S-Pen icon in black and white color">
+                        <h3 class="features-title">10.5" Immersive Display</h3>
+                        <p class="features-description">
+                            Samsung Galaxy Tablet S4 has the screen size of 10.5" inches (or 267.2mm) , 
+                            with the support of <span class="key-point">Super AMOLED</span>.
+                            It provides an impressive high <span class="key-point">screen resolution (2560 x 1600)</span> 
+                            and <span class="key-point">16M of color depth</span>, for the main display.
+                        </p>
+                    </div>
+
+                </section>
+
+                <section id="pricing">
+
+                </section>
+            </main>
+
+            <footer class="bg-black">
+                <div id="form-container" class="container text-center">
+                    <form id="form" method="GET" action="https://www.freecodecamp.com/email-submit">
+                        <div id="form-email-label">
+                            <label for="customer-email">To know more about our products , please subscribe our email letters</label>
+                        </div>
+
+                        <div id="form-email-container">
+                            <input id="email" type="email" class="" name="email" placeholder="Enter your valid email here">
+                        </div>
+                        
+                        <input id="submit" type="submit" class="btn" value="Submit">
+                    </form>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Project Test Embedded -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+        <!-- Sticky Functionality -->
+        <script>
+            
+            window.onscroll = function(){stickOnTop();};
+
+            var navbar = document.getElementById("nav-bar");
+            var sticky = navbar.offsetTop;
+
+            function stickOnTop(){
+                if(window.pageYOffset >= sticky)
+                    navbar.classList.add("sticky");
+                else
+                    navbar.classList.remove("sticky");
+            }
+
+        </script>
+    </body>
+</html>

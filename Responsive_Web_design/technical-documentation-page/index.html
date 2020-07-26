@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Documentation Page for Python</title>
+        <meta name="description" content="Technical Documentation Page Example for FreeCodeCamp module">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <nav id="navbar">
+                <header>Intro to Python</header>
+                <ul>
+                    <li><a class="nav-link" href="#What_is_Python" title="What is Python ?">What is Python</a></li>
+                    <li><a class="nav-link" href="#Hello_World" title="A sample program in Python">Hello World</a></li>
+                    <li><a class="nav-link" href="#Variables" title="About Python variables">Variables</a></li>
+                    <li><a class="nav-link" href="#Data_Types" title="Data types available in Python">Data Types</a></li>
+                    <li><a class="nav-link" href="#Flow_Controls" title="About flow controls in Python">Flow Controls</a></li>
+                    <li><a class="nav-link" href="#Reference" title="Reference of contents in this page">Reference</a></li>
+                </ul>
+            </nav>
+
+            <main id="main-doc">
+                <section class="main-section" id="What_is_Python">
+                    <header>What is Python</header>
+                    <article>
+                        <p>Python is an interpreted, high-level, general-purpose programming language, that created by Guido van Rossum and first released in 1991</p>
+                        <p>Benefits of Python :</p>
+                    </article>
+
+                    <ul>
+                        <li>Easy to Learn</li>
+                        <li>Great code readability</li>
+                        <li>Object-Oriented Approach Language Construction</li>
+                        <li>Extensive amount of tools & functionality provided</li>
+                        <li>Highly supportive in IoT</li>
+                    </ul>
+                </section>
+
+                <section class="main-section" id="Hello_World">
+                    <header>Hello World</header>
+                    <p>A popular, simple program to illustrate the output functionality in every programming language : </p>
+                    <code>print "Hello World!"</code> or 
+                    <code>print("Hello World!")</code>
+                    <p class="code-note">Note : Different notation in Python v2.0 (left) and v3.0 (right)</p>
+                    <p>This program will output the sentence (called string) "Hello World" on the output console</p>
+                </section>
+                
+                <section class="main-section" id="Variables">
+                    <header>Variables</header>
+                    <p>Variables are nothing but reserved memory locations to store values. In other word, you are reserving some space in the memory when you are creating a variable</p>
+                    <p>
+                        Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. 
+                        Thus, storing integers, decimals or characters in these variables can be done by assigning different data types to the variables. 
+                    </p>
+                    <p>
+                        Since Python is a dynamic programming language, thus no explicit variable declaration needed to reserve memory space, 
+                        while they are automatically done when you assign a value to a variable. The equal sign (=) is used to assign values to variables.
+                    </p>
+                    <code>counter = <span class="code-value">100</span>&nbsp;&nbsp;<span class="code-comment"># An integer assignment</span></code>
+                    <br>
+                    <code>miles = <span class="code-value">1000.0</span>&nbsp;&nbsp;<span class="code-comment"># A floating point</span></code>
+                    <br>
+                    <code>name = <span class="code-value">"Murphy"</span>&nbsp;&nbsp;<span class="code-comment"># A string assignment</span></code>
+                </section>
+                
+                <section class="main-section" id="Data_Types">
+                    <header>Data Types</header>
+                    <p>Python has various standard data types that are used to define the operations possible and the storage method on : </p>
+                    <ul>
+                        <li><a href="#numbers" title="Different numerical data types">Numbers</a></li>
+                        <li><a href="#string" title="">String</a></li>
+                        <li><a href="#list">List</a></li>
+                        <li><a href="tuple">Tuple</a></li>
+                        <li><a href="#dictionary">Dictionary</a></li>
+                    </ul>
+                    
+                    <section id="numbers">
+                        <header>Python Numbers</header>
+                        <p>Number data types store numeric values, which Number objects are created when a value assigned to them and accessed by reference. For example,</p>
+                        <code>var1 = 1</code>
+                        <p>The reference can be removed by using the <b>del</b> statement, ie</p>
+                        <code><span class="code-operator">del</span> var1[,var2[,var3[...,varN]]]</code>
+                        <p>Python supports four different numerical types -</p>
+                        <ul style="list-style-type: square;">
+                            <li>int (signed integers)</li>
+                            <li>long (long integers, they can also be represented in octal and hexadecimal)</li>
+                            <li>float (floating point real values)</li>
+                            <li>complex (complex numbers)</li>
+                        </ul>
+
+                        <caption>Several examples of numbers in each type</caption>
+                        <table class="table-bordered">                
+                            <tbody>
+                                <tr>    
+                                    <th>int</th>
+                                    <th>long</th>
+                                    <th>float</th>
+                                    <th>complex</th>
+                                </tr>
+
+                                <tr>
+                                    <td>10</td>
+                                    <td>5192436L</td>
+                                    <td>0.0</td>
+                                    <td>3.14j</td>
+                                </tr>
+
+                                <tr>
+                                    <td>100</td>
+                                    <td>-0x19323L</td>
+                                    <td>15.20</td>
+                                    <td>45.j</td>
+                                </tr>
+
+                                <tr>
+                                    <td>-786</td>
+                                    <td>0122L</td>
+                                    <td>-21.9</td>
+                                    <td>9.322e-36j</td>
+                                </tr>
+
+                                <tr>
+                                    <td>-0490</td>
+                                    <td>0xDEFACEBADEl</td>
+                                    <td>32.3+e18</td>
+                                    <td>-.6545+0J</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <ul style="list-style-type: square; margin-left: 50px;">
+                            <li>Python allows a lowercase <b>l</b> with long, while it is recommended to use only an uppercase L to avoid confusion with the number 1. Thus, Python displays long integers with an uppercase L.</li>
+                            <li>A complex number consists of an ordered pair of real floating-point numbers denoted by <b>x + yj</b>, where x and y are the real numbers and j is the imaginary unit.</li>
+                        </ul>
+                    </section>
+
+                    <section id="string">
+                        <header>Python String</header>
+                        <p>Strings in Python are identified as a contiguous set of characters represented in the quotation marks (either single or double quotes). Subsets of strings can be taken using the slice operator ([] and [:]) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end</p>
+                        <p>The plus (+) sign is the string concatenation opeartor and the asterisk (*) is the repetition operator.</p>
+                        <code>str = <span class="code-value">'Hello World!'</span></code>
+                        <br/>
+                        <code>str<span class="code-operator">[0:5]</span> <span class="code-comment"># 'Hello'</span></code>
+                        <br/>
+                        <code>str<span class="code-operator">[6:-1]</span> <span class="code-comment"># 'World'</span></code>
+                        <br/>
+                        <code>str <span class="code-operator">+</span><span class="code-value">" Earth"</span> <span class="code-comment"># 'Hello World! Earth'</span></code>
+                    </section>
+
+                    <section id="list">
+                        <header>Python Lists</header>
+                        <p>Lists are the most versatile of Python's compound data types, which contains items separated by commas and enclosed within square brackets ([])</p>
+                        <p>To some extent, lists are similar to arrays in C, while the difference is that all the items in a list can be different data type.</p>
+                        <p>Available operators are similar to those on Strings -</p>
+                        <code>list = [<span class="code-value">'abcd', 786, 2.23, 'John', 70.2</span>]</code><br/>
+                        <code>small_list = [<span class="code-value">123, 'Sam'</span>]</code><br/>
+                        <code>list<span class="code-operator">[0]</span><span class="code-comment"># 'abcd'</span></code><br/>
+                        <code>list<span class="code-operator">[1:3]</span><span class="code-comment"># [786, 2.23]</span></code><br/>
+                        <code>list<span class="code-operator">[2:]</span><span class="code-comment"># [2.23, 'John', 70.2]</span></code><br/>
+                        <code>small_list <span class="code-operator">* 2</span><span class="code-comment"># [123, 'Sam', 123, 'Sam']</span></code><br/>
+                        <code>list <span class="code-operator">+</span> small_list <span class="code-comment"># ['abcd', 786, 2.23, 'John', 70.2, 123, 'Sam']</span></code>
+                    </section>
+
+                    <section id="tuple">
+                        <header>Python Tuples</header>
+                        <p>A tuple is another sequence data type that is similar to the list, which consists of a number of values separated by commas. However, there is also some differences between them -</p>
+                        <ul>Differences between Lists and Tuples :
+                            <li>Lists are enclosed in brackets (<span style="font-weight: bold;">[ ]</span>), while tuples in parentheses (<span style="font-weight: bold;">( )</span>)</li>
+                            <li>Tuples can't be updated, said to be a <span style="font-weight: bold;">read-only</span> lists</li>
+                        </ul>
+                        <p>Most of the operations in Python lists can be applied on tuples too, except -</p>
+                        <code>tuple = <span class="code-value">('abcd',786,2.23,'john',70.2)</span></code><br/>
+                        <code>list = <span class="code-value">['abcd',786,2.23,'john',70.2]</span></code><br/>
+                        <code>tuple<span class="code-operator">[2]</span> =<span class="code-value">1000</span> <span class="code-comment"># Invalid syntax with tuple</span></code><br/>
+                        <code>list<span class="code-operator">[2]</span> =<span class="code-value">1000</span> <span class="code-comment"># Valid syntax with list</span></code><br/>
+                    </section>
+
+                    <section id="dictionary">
+                        <header>Python Dictionaries</header>
+                        <p>Python's dictionaries are kind of hash table type, which works like associative arrays or hashes that consist of key-value pairs. A dictionary key can be almost any Python type, but usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.</p>
+                        <p>Dictionaries are enclosed by curly braces (<span style="font-weight: bold;">{}</span>) and values can be assigned and accessed by using square braces (<span style="font-weight: bold;">[ ]</span>). For example - </p>
+                        <code>dict =<span class="code-value">{}</span> <span class="code-comment"># Declare an empty dict</span></code><br/>
+                        <code>dict<span class="code-operator">['one']</span> <span class="code-value">"This is one"</span><span class="code-comment"># Assign a key-value pair (key: 'one', value: "This is one")</span></code><br/>
+                        <code>dict<span class="code-operator">['one']</span> <span class="code-comment"> # Access entry with key 'one'</span></code><br/>
+                        <code>dict<span class="code-operator">.keys()</span> <span class="code-comment"> # Return all the keys in given dict</span></code><br/>
+                        <code>dict<span class="code-operator">.values()</span> <span class="code-comment"> # Return all the values in given dict</span></code><br/>
+                        <p class="code-note">Dictionaries have no concept of order among elements, just simply unordered</p>
+                    </section>
+                </section>
+
+                <section class="main-section" id="Flow_Controls">
+                    <header>Flow Controls</header>
+                    <p>Decision Making Statement : </p>
+                    <code>if <span class="code-operator">expression1</span> :<span class="code-value">statement1</span> elif <span class="code-operator">expression2</span> :<span class="code-value">statement2</span> else:<span class="code-value">statementElse</span></code>
+                    <p>while-loop : </p>
+                    <code>while <span class="code-operator">expression</span> : <span class="code-value">true_statement</span> else <span class="code-value">false_statement</span></code>
+                    <p>for-loop : </p>
+                    <code>for <span class="code-operator">iterating_var</span> in <span class="code-operator">sequence</span>: <span class="code-value">true_statement</span> else <span class="code-value">false_statement</span></code>
+                    <p>Note : do...while-loop is not supported in Python, while it can be accomplished in logic ways</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>No.</th>
+                                <th>Control Statement & Description</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><span style="font-weight: bold;">break</span> - Terminates the loop statement and transfers execution to the statement immediately following the loop</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span style="font-weight: bold;">continue</span> - Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span style="font-weight: bold;">pass</span> - Terminates the loop statement and transfers execution to the statement immediately following the loop</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="main-section" id="Reference">
+                    <header>Reference</header>
+                    <p style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;All the documentation in this page is taken from <a href="https://www.tutorialspoint.com/python">Tutorialspoint</a></p>
+                </section>
+            </main>
+        </div>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+</html>

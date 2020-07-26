@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.25em;  
+    box-sizing: content-box;  
+}
+
+small {
+    font-size: calc(10px + 0.5vw);
+}
+
+.required::before {
+    content: "*";
+    color: red;
+}
+
+#description { 
+    font-weight: 500; 
+    font-size: 1.2em;
+    color: #848482;
+}
+
+.container {
+    margin: auto;
+}
+
+main#form-container {
+
+    /* Sizing */
+    width: 70%;
+    max-width: 900px;
+
+    /* Border-Styling */
+    border-radius: 0.5em;
+
+    /* Spacing */
+    padding: 1em 7.5vw;
+}
+
+.form-element {
+    margin-bottom: 12px;
+}
+
+.form-element > .form-label {
+
+    display: inline-block;
+
+    /* Sizing */
+    width: 40%;
+
+    /* Alignment */
+    text-align: right;
+    vertical-align: top;
+
+    /* Text Styling */
+    font-weight: 550;
+
+    /* Spacing */
+    padding: 4px;
+    margin-top: 10px;
+}
+
+.form-element > .form-input {
+    
+    display: inline-block;
+
+    /* Sizing */
+    width: 50%;
+
+    /* Spacing */
+    margin: 0.5em;
+}
+
+.form-input > .input-field {
+
+    /* Size */
+    width: 70%;
+    min-width: 200px;
+    font-size: 0.8em;
+
+    /* Spacing */
+    padding: 10px 15px;
+
+    /* Border Styling */
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.form-input > .input-field:focus {
+    outline-color: #82CAFA;
+    outline-width: 15px;
+}
+
+textarea#comment {
+
+    /* Size */
+    width: 90%;
+    height: calc(70px + 1vw);
+    min-height: 75px;
+}
+
+ul.form-select-list {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 7px;
+    padding-left: 20px;
+}
+
+ul.form-select-list > li {
+    margin-bottom: 1vw;
+}
+
+button.btn {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: calc(3px + 1vw)  calc(20px + 1vw);
+    background-color: #BCC6CC;
+}
+
+button.btn > .btn-text {
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+button.btn:hover { background-color: #8A949A; }
+button.btn > .btn-text:hover { color: white; } 
+
+/* Text Horizontal Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right {text-align: right;}
+
+/* Spacing Definitions */
+.p-0 { padding: 0; }
+.p-1 { padding: 1em; }
+.p-2 { padding: 2em; }
+.p-3 { padding: 3em; }
+.p-4 { padding: 4em; }
+.p-5 { padding: 5em; }
+
+.pt-0 { padding-top: 0; }
+.pt-1 { padding-top: 1em; }
+.pt-2 { padding-top: 2em; }
+.pt-3 { padding-top: 3em; }
+.pt-4 { padding-top: 4em; }
+.pt-5 { padding-top: 5em; }
+
+.pb-0 { padding-bottom: 0; }
+.pb-1 { padding-bottom: 1em; }
+.pb-2 { padding-bottom: 2em; }
+.pb-3 { padding-bottom: 3em; }
+.pb-4 { padding-bottom: 4em; }
+.pb-5 { padding-bottom: 5em; }
+
+.pl-0 { padding-left: 0; }
+.pl-1 { padding-left: 1em; }
+.pl-2 { padding-left: 2em; }
+.pl-3 { padding-left: 3em; }
+.pl-4 { padding-left: 4em; }
+.pl-5 { padding-left: 5em; }
+
+.pr-0 { padding-right: 0; }
+.pr-1 { padding-right: 1em; }
+.pr-2 { padding-right: 2em; }
+.pr-3 { padding-right: 3em; }
+.pr-4 { padding-right: 4em; }
+.pr-5 { padding-right: 5em; }
+
+/* Background-Color Classes Definition */
+.bg-white { background-color: white; }
+.bg-black { background-color: black; }
+.bg-metallic-silver { background-color: #BCC6CC; }
+.bg-alien-green { background-color: #6CC417; }
+.bg-green-pea { background-color: #89C35C; }
+
+@media only screen and (max-width: 550px){
+
+    .form-element > .form-label,
+    .form-element > .form-input,
+    .form-element > .form-input > .input-field {
+        display: block;
+        width: 90%;
+        text-align: left;
+    }
+
+    label { font-size: 1em; }
+    li, li > label { font-size: 0.8em; }
+
+    .form-element { margin-bottom: 20px; }
+    .form-element > .form-input { 
+        margin: 0; 
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+}
