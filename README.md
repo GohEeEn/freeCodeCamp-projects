@@ -1,2 +1,3 @@
-# freeCodeCamp
- Projects done for freeCodeCamp Certification Courses
+# freeCodeCamp-projects
+
+Projects done for freeCodeCamp Certification Courses
