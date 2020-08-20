@@ -1,0 +1,17 @@
+===== Port Scanner in Python =====
+1. Default Argument 	: https://www.programiz.com/python-programming/function-argument
+2. Python Code Doc  	: https://realpython.com/documenting-python-code/
+3. Python Validators	: https://validators.readthedocs.io/en/latest/#
+4. Python Socket Doc	: https://docs.python.org/3/library/socket.html
+5. Python RegEx		: https://www.w3schools.com/python/python_regex.asp
+6. RegEx Online Tester	: https://regexr.com/
+7. Python Port2Service	: https://subscription.packtpub.com/book/cloud_and_networking/9781786463999/1/ch01lvl1sec06/finding-a-service-name--given-the-port-and-protocol
+
+===== SHA-1 Brute-force Password Cracker in Python =====
+1. Salt in Cryptography	: https://en.wikipedia.org/wiki/Salt_(cryptography)
+2. Python hashlib	: https://docs.python.org/3/library/hashlib.html
+
+===== Stock Price Checker =====
+1. How to SET NODE_ENV		: https://stackoverflow.com/questions/9198310/how-to-set-node-env-to-production-development-in-os-x
+2. Content-Security-Policy 	: https://content-security-policy.com/
+3. CSP with HelmetJS		: https://helmetjs.github.io/docs/csp/
